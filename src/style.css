@@ -115,3 +115,14 @@
 @media print{.print-view h1,.print-view h2,.print-view h3{font-family:Arial,sans-serif;font-weight:500}}
 .settings-link{width:100%;border-top:1px solid #ffffff13;display:flex;align-items:center;gap:12px;padding:19px 10px;color:#aab6c3;text-align:left;font-size:12px;font-weight:600}.settings-link span{flex:1}.settings-link svg:last-child{color:#899ba9}.settings-link:hover{color:#fff}
 .brand{padding:0 10px 31px;min-height:58px}.brand-logo{display:block;width:155px;max-width:100%;height:auto}
+
+/* ── PWA ─────────────────────────────────────────────── */
+.install-app{width:100%;display:flex;align-items:center;gap:12px;padding:19px 10px;border-top:1px solid #ffffff13;color:#c7b4ff;text-align:left;font-size:12px;font-weight:700;letter-spacing:.2px}
+.install-app span{flex:1}
+.install-app svg:last-child{color:#9a86d9}
+.install-app:hover{color:#fff}
+.install-app:hover svg:last-child{color:#c7b4ff}
+.pwa-offline{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:9px;background:#0d1624;color:#f5f6f8;font-size:12px;font-weight:600;line-height:1.35;padding:11px 16px;border-radius:999px;box-shadow:0 16px 40px #0d162440;max-width:calc(100vw - 32px)}
+.pwa-offline svg{flex:none;color:#ffb27a}
+@media(max-width:700px){.pwa-offline{bottom:calc(14px + env(safe-area-inset-bottom,0px));font-size:11px;padding:10px 14px;text-align:left}}
+@media print{.pwa-offline,.install-app{display:none!important}}
