@@ -159,3 +159,33 @@
 /* ── Tarjetas de proyecto: categoría más grande y sin negrita ── */
 .project-card .category{font-size:10px;font-weight:400;letter-spacing:.7px;margin-bottom:8px}
 .project-card>p{margin-bottom:18px}
+
+/* ── Tarjetas de proyecto: compactas, reordenables y con letra 10% mayor ── */
+/* La escala se aplica solo a los textos de las tarjetas de la cuadrícula. */
+.project-grid{--card-type-scale:1.1}
+.project-grid.is-sorting{user-select:none}
+.project-card{position:relative;padding:12px 14px;cursor:pointer;color:inherit;font:inherit}
+.project-card:focus-visible{outline:3px solid #b5a2f4;outline-offset:2px}
+.project-card:hover{transform:translateY(-2px)}
+.project-card.is-dragging{opacity:.48;transform:scale(.98);box-shadow:none;cursor:grabbing}
+.project-card.drop-before::before,.project-card.drop-after::after{content:'';position:absolute;left:-7px;right:-7px;height:3px;border-radius:3px;background:#5f7f9f;box-shadow:0 0 0 2px #f5f6f8;z-index:2;pointer-events:none}
+.project-card.drop-before::before{top:-8px}
+.project-card.drop-after::after{bottom:-8px}
+.project-card-head{display:flex;align-items:center;gap:7px;margin-bottom:7px}
+.project-card-head .category{margin:0;font-size:calc(10px * var(--card-type-scale));font-weight:400;letter-spacing:.7px}
+.drag-handle{margin-left:auto;width:26px;height:26px;flex:none;display:grid;place-items:center;border-radius:7px;color:#a3b1bf;cursor:grab;touch-action:none}
+.drag-handle:hover,.drag-handle:focus-visible{background:#edf1f4;color:#526579}
+.drag-handle:active{cursor:grabbing}
+.drag-handle:focus-visible{outline:3px solid #b5a2f4;outline-offset:1px}
+.project-card h3{font-size:calc(15px * var(--card-type-scale));line-height:1.3;margin:0 0 5px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.project-card>p{font-size:calc(10px * var(--card-type-scale));line-height:1.45;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.new-project-card{min-height:0;padding:16px 14px;gap:6px}
+.new-project-card>span{width:30px;height:30px;border-radius:9px}
+.new-project-card>span svg{width:18px;height:18px}
+.new-project-card b{font-size:calc(12px * var(--card-type-scale))}
+.new-project-card small{font-size:calc(10px * var(--card-type-scale))}
+.drag-hint{display:inline-flex;align-items:center;gap:5px;margin-top:7px;font-size:10px;font-weight:600;color:#8b9aaa}
+.drag-hint svg{color:#7e93a6}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:700px){.project-card{padding:14px}.drag-hint{font-size:9px}}
+@media print{.drag-handle,.drag-hint{display:none!important}}
