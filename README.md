@@ -8,10 +8,10 @@ Vite + React. Funciona también como **PWA instalable** con soporte offline.
 Las tarjetas de proyecto son compactas (sin icono superior ni fila de avatar) y
 su tipografía es un **10% más grande** que la del resto de la cuadrícula.
 
-En **Resumen** y **Proyectos**, cada tarjeta tiene un asa en la esquina superior
-derecha. Arrástrala con el mouse o con el dedo para poner el proyecto donde
-quieras; también puedes enfocar el asa y moverlo con `←` `→` `↑` `↓` (o
-`Inicio` / `Fin`). El orden se guarda en `localStorage` junto con los proyectos
+En **Resumen** y **Proyectos** puedes jalar la tarjeta completa con el mouse
+para poner el proyecto donde quieras. En pantallas táctiles se usa el asa
+(`⋮⋮`) de la esquina superior derecha, así el scroll sigue funcionando; el asa
+también permite mover el proyecto con `←` `→` `↑` `↓` (o `Inicio` / `Fin`). El orden se guarda en `localStorage` junto con los proyectos
 y se refleja en el sidebar, el menú de proyectos, el presupuesto y la línea de
 tiempo.
 
