@@ -122,7 +122,36 @@
 .install-app svg:last-child{color:#9a86d9}
 .install-app:hover{color:#fff}
 .install-app:hover svg:last-child{color:#c7b4ff}
-.pwa-offline{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:9px;background:#0d1624;color:#f5f6f8;font-size:12px;font-weight:600;line-height:1.35;padding:11px 16px;border-radius:999px;box-shadow:0 16px 40px #0d162440;max-width:calc(100vw - 32px)}
+.pwa-offline{position:fixed;left:50%;bottom:calc(88px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:9px;background:#0d1624;color:#f5f6f8;font-size:12px;font-weight:600;line-height:1.35;padding:11px 16px;border-radius:999px;box-shadow:0 16px 40px #0d162440;max-width:calc(100vw - 32px)}
 .pwa-offline svg{flex:none;color:#ffb27a}
-@media(max-width:700px){.pwa-offline{bottom:calc(14px + env(safe-area-inset-bottom,0px));font-size:11px;padding:10px 14px;text-align:left}}
+@media(max-width:700px){.pwa-offline{bottom:calc(80px + env(safe-area-inset-bottom,0px));font-size:11px;padding:10px 14px;text-align:left}}
 @media print{.pwa-offline,.install-app{display:none!important}}
+
+/* ── Botón flotante de proyectos (centro abajo) y menú en pantalla completa ── */
+.projects-fab{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:30;display:flex;align-items:center;gap:9px;height:52px;padding:0 20px;border-radius:999px;background:#0d1624;color:#fff;font-size:13px;font-weight:700;border:1px solid #ffffff1f;box-shadow:0 14px 34px #0d162445;transition:background .15s,transform .15s}
+.projects-fab:hover{background:#1d2938;transform:translateX(-50%) translateY(-2px)}
+.projects-fab svg{color:#c8d6e2}
+.projects-fab em{font-style:normal;background:#ffffff22;border-radius:999px;padding:2px 8px;font-size:11px;font-weight:800}
+.fs-menu{position:fixed;inset:0;z-index:40;background:#0d1624;color:#fff;display:flex;flex-direction:column;padding:24px 20px calc(18px + env(safe-area-inset-bottom,0px));animation:fsIn .22s ease}
+@keyframes fsIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.fs-menu-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.fs-menu-head .brand-logo{width:150px}
+.fs-menu-close{color:#aab6c3;padding:9px;border-radius:10px;display:grid;place-items:center}
+.fs-menu-close:hover{background:#ffffff12;color:#fff}
+.fs-menu-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:0 6px 12px}
+.fs-menu-title .nav-label{margin:0}
+.fs-menu-title .nav-label span{margin-left:5px;color:#b3c2cf}
+.fs-menu-title h2{font:800 24px 'Work Sans',sans-serif;letter-spacing:-.5px;margin:8px 0 0}
+.fs-menu-add{color:#a6b5c3;padding:9px;display:grid;place-items:center;border-radius:10px;background:#ffffff0d}
+.fs-menu-add:hover{background:#ffffff1f;color:#fff}
+.fs-menu-list{flex:1;overflow:auto;display:flex;flex-direction:column;gap:4px;padding:2px 4px;scrollbar-width:thin;scrollbar-color:#365575 transparent}
+.fs-menu-list .project-nav-item{padding:14px 12px;font-size:14px;border-radius:10px;gap:12px}
+.fs-menu-cat{font-size:9px;letter-spacing:.6px;font-weight:800;color:#7f97b4;flex:none}
+.project-nav-item.active .fs-menu-cat{color:#cdd8e2}
+.fs-menu-all{margin:12px 6px 0;font-size:12px}
+.fs-menu-foot{border-top:1px solid #ffffff13;margin-top:14px;padding-top:12px;display:flex;flex-direction:column}
+.fs-menu-foot .settings-link,.fs-menu-foot .install-app{border-top:0;padding:13px 10px}
+.fs-home{width:100%;height:50px;font-size:14px;border-radius:12px;margin-bottom:6px}
+.content{padding-bottom:100px}
+@media(max-width:700px){.projects-fab{bottom:calc(14px + env(safe-area-inset-bottom,0px));height:50px;padding:0 18px;font-size:12px}.fs-menu{padding:20px 16px calc(14px + env(safe-area-inset-bottom,0px))}.fs-menu-title h2{font-size:21px}.fs-menu-list .project-nav-item{padding:13px 12px;font-size:13px}.content{padding-bottom:96px}}
+@media print{.projects-fab,.fs-menu{display:none!important}}
